@@ -1,0 +1,300 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>ProgValues Results</title>
+<link rel="icon" type="x-icon" href="progicon.png">
+<link rel="shortcut icon" type="x-icon" href="progicon.png">
+<meta charset="utf-8">
+<script>
+  version = "ProgValues" //Remember to update this before making changes to the test itself!
+</script>
+</head>
+<script type="application/javascript"
+        src="ideologies.js">
+</script>
+
+<body>
+<h1>ProgValues</h1>
+<hr>
+
+<h1>Results</h1>
+
+<h2>Environmental Axis: <span class="weight-300" id="benvi"></span></h2>
+<div class="axis">
+    <img id="img-natu" src="value_images/nature.png" height="128pt"/>
+    <div class="bar natu" id="bar-natu"><div class="text-wrapper" id="natu"></div></div>
+    <div class="bar indu" id="bar-indu"><div class="text-wrapper" id="indu"></div></div>
+    <img id="img-indu" src="value_images/industry.png" height="128pt"/>
+</div>
+<h2>Cultural Axis: <span class="weight-300" id="bcult"></span></h2>
+<div class="axis">
+    <img id="img-dive" src="value_images/diversity.png" height="128pt"/>
+    <div class="bar dive" id="bar-dive"><div class="text-wrapper" id="dive"></div></div>
+    <div class="bar inte" id="bar-inte"><div class="text-wrapper" id="inte"></div></div>
+    <img id="img-inte" src="value_images/integration.png" height="128pt"/>
+</div>
+<h2>Distribution Axis: <span class="weight-300" id="bdist"></span></h2>
+<div class="axis">
+    <img id="img-regu" src="value_images/regulation.png" height="128pt"/>
+    <div class="bar regu" id="bar-regu"><div class="text-wrapper" id="regu"></div></div>
+    <div class="bar mark" id="bar-mark"><div class="text-wrapper" id="mark"></div></div>
+    <img id="img-mark" src="value_images/markets.png" height="128pt"/>
+</div>
+<h2>Power Axis: <span class="weight-300" id="bpowe"></span></h2>
+<div class="axis">
+    <img id="img-equa" src="value_images/equality.png" height="128pt"/>
+    <div class="bar equa" id="bar-equa"><div class="text-wrapper" id="equa"></div></div>
+    <div class="bar prof" id="bar-prof"><div class="text-wrapper" id="prof"></div></div>
+    <img id="img-prof" src="value_images/profit.png" height="128pt"/>
+</div>
+<h2>Force Axis: <span class="weight-300" id="bforc"></span></h2>
+<div class="axis">
+    <img id="img-grad" src="value_images/gradual.png" height="128pt"/>
+    <div class="bar grad" id="bar-grad"><div class="text-wrapper" id="grad"></div></div>
+    <div class="bar enfo" id="bar-enfo"><div class="text-wrapper" id="enfo"></div></div>
+    <img id="img-enfo" src="value_images/enforced.png" height="128pt"/>
+</div>
+<h2>Leadership Axis: <span class="weight-300" id="blead"></span></h2>
+<div class="axis">
+    <img id="img-demo" src="value_images/democracy.png" height="128pt"/>
+    <div class="bar demo" id="bar-demo"><div class="text-wrapper" id="demo"></div></div>
+    <div class="bar tech" id="bar-tech"><div class="text-wrapper" id="tech"></div></div>
+    <img id="img-tech" src="value_images/technocracy.png" height="128pt"/>
+</div>
+<h2>Outlook Axis: <span class="weight-300" id="boutl"></span></h2>
+<div class="axis">
+    <img id="img-prag" src="value_images/pragmatism.png" height="128pt"/>
+    <div class="bar prag" id="bar-prag"><div class="text-wrapper" id="prag"></div></div>
+    <div class="bar idea" id="bar-idea"><div class="text-wrapper" id="idea"></div></div>
+    <img id="img-idea" src="value_images/idealism.png" height="128pt"/>
+</div>
+<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+<p>There's no closest match for now, so cope with the axes lmao</p>
+<p>You think your results should be integrated into the closest matches ? Send them to me on Discord ( Quark#0741 ) or on Gmail ( beaulieu.renaud@gmail.com ) . </p>
+<hr/>
+<img src="" id="banner">
+<button class="button" onclick="location.href='index.html';" style="background-color: #0075ff;">Back</button> <br>
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    function setBarValue(name, value) {
+        innerel = document.getElementById(name)
+        outerel = document.getElementById("bar-" + name)
+        outerel.style.width = (value + "%")
+        innerel.innerHTML = (value + "%")
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = "hidden"
+        }
+    }
+
+    benviArray = ["","","","","","",""]
+    bcultArray = ["","","","","","",""]
+    bdistArray = ["","","","","","",""]
+    bpoweArray = ["","","","","","",""]
+    bforcArray = ["","","","","","",""]
+    bleadArray = ["","","","","","",""]
+    boutlArray = ["","","","","","",""]
+
+    function setLabel(val,ary) {
+        if (val > 100) { return "" } else
+        if (val > 85) { return ary[0] } else
+        if (val > 70) { return ary[1] } else
+        if (val > 60) { return ary[2] } else
+        if (val >= 40) { return ary[3] } else
+        if (val >= 30) { return ary[4] } else
+        if (val >= 15) { return ary[5] } else
+        if (val >= 0) { return ary[6] } else
+        	{return ""}
+    }
+
+    natu = getQueryVariable("natu")
+    dive = getQueryVariable("dive")
+    regu = getQueryVariable("regu")
+    equa = getQueryVariable("equa")
+    grad = getQueryVariable("grad")
+    demo = getQueryVariable("demo")
+    prag = getQueryVariable("prag")
+    indu = (100 - natu).toFixed(1)
+    inte = (100 - dive).toFixed(1)
+    mark = (100 - regu).toFixed(1)
+    prof = (100 - equa).toFixed(1)
+    enfo = (100 - grad).toFixed(1)
+    tech = (100 - demo).toFixed(1)
+    idea = (100 - prag).toFixed(1)
+
+    setBarValue("natu", natu)
+    setBarValue("indu", indu)
+    setBarValue("dive", dive)
+    setBarValue("inte", inte)
+    setBarValue("regu", regu)
+    setBarValue("mark", mark)
+    setBarValue("equa", equa)
+    setBarValue("prof", prof)
+    setBarValue("grad", grad)
+    setBarValue("enfo", enfo)
+    setBarValue("demo", demo)
+    setBarValue("tech", tech)
+    setBarValue("prag", prag)
+    setBarValue("idea", idea)
+
+    document.getElementById("benvi").innerHTML = setLabel(natu, benviArray)
+    document.getElementById("bsoci").innerHTML = setLabel(dive, bsociArray)
+    document.getElementById("bdist").innerHTML = setLabel(regu, bdistArray)
+    document.getElementById("bpowe").innerHTML = setLabel(equa, bpoweArray)
+    document.getElementById("bforc").innerHTML = setLabel(grad, bforcArray)
+    document.getElementById("blead").innerHTML = setLabel(demo, bleadArray)
+    document.getElementById("boutl").innerHTML = setLabel(prag, boutlArray)
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.pow(Math.abs(ideologies[i].stats.benvi - natu), 4)
+        dist += Math.pow(Math.abs(ideologies[i].stats.bcult - dive), 4)
+        dist += Math.pow(Math.abs(ideologies[i].stats.bdist - regu), 4)
+        dist += Math.pow(Math.abs(ideologies[i].stats.bpowe - equa), 3)
+        dist += Math.pow(Math.abs(ideologies[i].stats.bforc - grad), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.blead - demo), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.boutl - prag), 3)
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    document.getElementById("ideology-label").innerHTML = ideology
+
+    function createImage(src, x, y, w, h) {
+        img = new Image ()
+        img.src = src
+        img.onLoad = function() {
+            ctx.drawImage(img, x, y, w, h)
+        }
+    }
+
+    window.onload = function() {
+        var c = document.createElement("canvas")
+        var ctx = c.getContext("2d")
+        c.width = 800;
+        c.height = 650;
+        ctx.fillStyle = "#e0e0e0"
+        ctx.fillRect(0,0,800,650);
+
+        img = document.getElementById("img-free")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-corp")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-futu")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-cons")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-auto")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-demo")
+        ctx.drawImage(img, 680, 410, 100, 100)
+        img = document.getElementById("img-auth")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-libe")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-land")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-geor")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-anti")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-reli")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-glob")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-nati")
+        ctx.drawImage(img, 680, 410, 100, 100)
+        img = document.getElementById("img-inte")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-isol")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-acce")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-dece")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-elit")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-popu")
+        ctx.drawImage(img, 680, 530, 100, 100)
+        img = document.getElementById("img-disu")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-righ")
+        ctx.drawImage(img, 680, 530, 100, 100)
+
+        ctx.fillStyle="#000000"
+        ctx.fillRect(120, 180, 560, 80)
+        ctx.fillRect(120, 300, 560, 80)
+        ctx.fillRect(120, 420, 560, 80)
+        ctx.fillRect(120, 540, 560, 80)
+        ctx.fillStyle="#757575"
+        ctx.fillRect(120, 184, 5.6*free-2, 72)
+        ctx.fillStyle="#00b5ff"
+        ctx.fillRect(682-5.6*corp, 184, 5.6*corp-2, 72)
+        ctx.fillStyle="#c00000"
+        ctx.fillRect(120, 304, 5.6*futu-2, 72)
+        ctx.fillStyle="#ffe000"
+        ctx.fillRect(682-5.6*cons, 304, 5.6*cons-2, 72)
+        ctx.fillStyle="#7500c0"
+        ctx.fillRect(120, 424, 5.6*auto-2, 72)
+        ctx.fillStyle="#75c000"
+        ctx.fillRect(682-5.6*demo, 424, 5.6*demo-2, 72)
+        ctx.fillStyle="#ff50a0"
+        ctx.fillRect(120, 544, 5.6*auth-2, 72)
+        ctx.fillStyle="#e07500"
+        ctx.fillRect(682-5.6*libe, 544, 5.6*libe-2, 72)
+        ctx.fillStyle="#000000"
+        ctx.font="700 60px Montserrat"
+        ctx.textAlign="left"
+        ctx.fillText("CapValues", 20, 90)
+        ctx.font="40px Montserrat"
+        ctx.fillText(ideology, 20, 140)
+
+        ctx.textAlign="left"
+        if (free > 30) {ctx.fillText(free + "%", 130, 237.5)}
+        if (futu > 30) {ctx.fillText(futu + "%", 130, 357.5)}
+        if (auto > 30) {ctx.fillText(auto + "%", 130, 477.5)}
+        if (auth > 30) {ctx.fillText(auth + "%", 130, 597.5)}
+        ctx.textAlign="right"
+        if (corp > 30) {ctx.fillText(corp + "%", 670, 237.5)}
+        if (cons > 30) {ctx.fillText(cons + "%", 670, 357.5)}
+        if (demo > 30) {ctx.fillText(demo + "%", 670, 477.5)}
+        if (libe > 30) {ctx.fillText(libe + "%", 670, 597.5)}
+
+        ctx.textAlign="center"
+        ctx.fillText("Economic Axis: " + document.getElementById("becon").innerHTML, 400, 175)
+        ctx.fillText("Social Axis: " + document.getElementById("bsoci").innerHTML, 400, 295)
+        ctx.fillText("Political Axis: " + document.getElementById("bpoli").innerHTML, 400, 415)
+        ctx.fillText("State Axis: " + document.getElementById("bstat").innerHTML, 400, 535)
+
+        document.getElementById("banner").src = c.toDataURL();
+    }
+    </script>
+</body>
