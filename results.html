@@ -99,7 +99,7 @@ stats"></a></div></noscript>
                    var pair = vars[i].split("=")
                    if(pair[0] == variable) {return pair[1]}
            }
-           return(NaN);
+           return(Crap);
     }
 
     function setBarValue(name, value) {
@@ -112,13 +112,13 @@ stats"></a></div></noscript>
         }
     }
 
-    benviArray = ["","","","","","",""]
-    bcultArray = ["","","","","","",""]
-    bdistArray = ["","","","","","",""]
-    bpoweArray = ["","","","","","",""]
-    bforcArray = ["","","","","","",""]
-    bleadArray = ["","","","","","",""]
-    boutlArray = ["","","","","","",""]
+    benviArray = ["Ecological","Environmental","Green","Sustainable","Productive","Industrial","Anthropocentric"]
+    bcultArray = ["Multicultural","Diverse","Respectful","Neutral","Judging","Assimilation","Monocultural"]
+    bdistArray = ["Planned","Directed","Regulated","Neutral","Market","Free Market","Laissez Faire"]
+    bpoweArray = ["Communist","Socialist","Socialistic","Syncretic","Capitalistic","Capitalist","Plutocratic"]
+    bforcArray = ["Anarchist","Libertarian","Liberal","Neutral","Radical","Rigorous","Enforced"]
+    bleadArray = ["Direct","Liquid","Proportional","Representative","Responsible","Scientocratic","Technocratic"]
+    boutlArray = ["Machiavellian","Pragmatic","Realistic","Neutral","Romantic","Idealistic","Utopian"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -174,13 +174,13 @@ stats"></a></div></noscript>
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.benvi - natu), 4)
-        dist += Math.pow(Math.abs(ideologies[i].stats.bcult - dive), 4)
-        dist += Math.pow(Math.abs(ideologies[i].stats.bdist - regu), 4)
-        dist += Math.pow(Math.abs(ideologies[i].stats.bpowe - equa), 3)
-        dist += Math.pow(Math.abs(ideologies[i].stats.bforc - grad), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.blead - demo), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.boutl - prag), 3)
+        dist += Math.abs(ideologies[i].stats.benvi - natu)
+        dist += Math.abs(ideologies[i].stats.bcult - dive)*2
+        dist += Math.abs(ideologies[i].stats.bdist - regu)*2
+        dist += Math.abs(ideologies[i].stats.bpowe - equa)*2
+        dist += Math.abs(ideologies[i].stats.bforc - grad)*2
+        dist += Math.abs(ideologies[i].stats.blead - demo)*2
+        dist += Math.abs(ideologies[i].stats.boutl - prag)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
